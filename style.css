@@ -1,0 +1,75 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    justify-content: center;
+    display: flex;
+}
+
+.game {
+    position: absolute;
+    margin-top: 50px;
+    width: 288px;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.block {
+    width: 70px;
+    height: 70px;
+    padding: 10px;
+    margin: 3px;
+}
+
+.lines {
+    position: absolute;
+    z-index: -1;
+    margin-top: 50px;
+    width: 288px;
+    height: 288px;
+    /* background: #000; */
+    display: flex;
+}
+
+.vertical {
+    position: absolute;
+    padding: 3px;
+    display: flex;
+}
+
+.vertical > div {
+    width: 6px;
+    height: 283px;
+    margin-left: 90px;
+    border-radius: 6px;
+    background: linear-gradient(90deg, rgb(248, 246, 106), rgb(116, 91, 9));
+}
+
+.horizontal {
+    padding: 3px;
+}
+
+.horizontal > div{
+    width: 283px;
+    height: 6px;
+    margin-top: 90px;
+    border-radius: 6px;
+    background: linear-gradient(rgb(248, 246, 106), rgb(116, 91, 9));
+}
+
+.none {
+    background: rgb(43, 97, 141);
+}
+
+.X {
+    background-image: url(X.jpg);
+    background-size: contain;
+}
+
+.O {
+    background-image: url(O.png);
+    background-size: contain;
+}
