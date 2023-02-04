@@ -36,7 +36,6 @@ game.onclick = event => {
             event.target.innerHTML = 'O';
         }
         i++;
-        console.log(document.getElementsByClassName('block'));
         Win();
     }
 
@@ -52,6 +51,7 @@ let wino = 0;
 
 function Win () {
     const allBlocks = document.getElementsByClassName('block');
+
     //Хрестики
     function winX () {
         winx++;
@@ -60,7 +60,7 @@ function Win () {
         }
 
         document.querySelector('.accountX').innerHTML = `X: ${winx}`
-        i++;    //щоб наступний раунд почався з Х
+        i=0;    //щоб наступний раунд почався з Х
         alert ('Виграли X');
     }
     //Горизонталь
@@ -81,7 +81,7 @@ function Win () {
             allBlocks[i].innerHTML = '';
         }
         document.querySelector('.accountO').innerHTML = `O: ${wino}`
-        i++;    //щоб наступний раунд почався з Х
+        i=0;    //щоб наступний раунд почався з Х
         alert ('Виграли O');
     }                                                                 
     //Горизонталь
@@ -95,4 +95,18 @@ function Win () {
     //Діагональ                      
     if (allBlocks[0].innerHTML == 'O' && allBlocks[4].innerHTML == 'O' && allBlocks[8].innerHTML == 'O') winO();
     if (allBlocks[2].innerHTML == 'O' && allBlocks[4].innerHTML == 'O' && allBlocks[6].innerHTML == 'O') winO();
+
+    //нічія
+    if (i == 9) {
+        winx++;
+        wino++;
+        for (i = 0; i < allBlocks.length; i++) {    //очищає поля
+            allBlocks[i].innerHTML = '';
+        }
+
+        document.querySelector('.accountX').innerHTML = `X: ${winx}`
+        document.querySelector('.accountO').innerHTML = `O: ${wino}`
+        i=0;    //щоб наступний раунд почався з Х
+        alert ('Виграла дружба!');
+    }
 }
