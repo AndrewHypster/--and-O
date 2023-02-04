@@ -9,7 +9,7 @@ body {
 }
 
 .account {
-    margin-top: 3%;
+    margin-top: 10px;
     width: 288px;
     justify-content: space-between;
     display: flex;
@@ -22,7 +22,7 @@ body {
 
 .game {
     position: absolute;
-    margin-top: 8%;
+    margin-top: 60px;
     width: 288px;
     justify-content: center;
     display: flex;
@@ -42,7 +42,7 @@ body {
 .lines {
     position: absolute;
     z-index: -1;
-    margin-top: 8%;
+    margin-top: 60px;
     width: 288px;
     height: 288px;
     /* background: #000; */
