@@ -8,26 +8,41 @@ body {
     display: flex;
 }
 
+.account {
+    margin-top: 3%;
+    width: 288px;
+    justify-content: space-between;
+    display: flex;
+}
+
+.accountX, .accountO {
+    color: rgb(28, 114, 25);
+    font-size: 40px;
+}
+
 .game {
     position: absolute;
-    margin-top: 50px;
+    margin-top: 8%;
     width: 288px;
     justify-content: center;
     display: flex;
     flex-wrap: wrap;
 }
 
-.block {
+.block, .X, .O {
     width: 70px;
     height: 70px;
     padding: 10px;
     margin: 3px;
+    background: rgb(43, 97, 141);
+    font-size: 70px;
+    text-align: center;
 }
 
 .lines {
     position: absolute;
     z-index: -1;
-    margin-top: 50px;
+    margin-top: 8%;
     width: 288px;
     height: 288px;
     /* background: #000; */
@@ -58,18 +73,4 @@ body {
     margin-top: 90px;
     border-radius: 6px;
     background: linear-gradient(rgb(248, 246, 106), rgb(116, 91, 9));
-}
-
-.none {
-    background: rgb(43, 97, 141);
-}
-
-.X {
-    background-image: url(X.jpg);
-    background-size: contain;
-}
-
-.O {
-    background-image: url(O.png);
-    background-size: contain;
 }
